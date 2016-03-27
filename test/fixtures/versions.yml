@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  candidates: 1
+  questions: 1
+  tips: 1
+
+two:
+  candidates: 1
+  questions: 1
+  tips: 1

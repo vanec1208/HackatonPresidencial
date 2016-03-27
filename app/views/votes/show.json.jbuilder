@@ -1,0 +1,1 @@
+json.extract! @vote, :id, :candidate_id

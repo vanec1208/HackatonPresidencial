@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+ 
+ <p>
+   <strong>University:</strong>
+   <%= @study.university %>
+ </p>
+ 
+ <p>
+   <strong>Study:</strong>
+   <%= @study.study %>
+ </p>
+ 
+ <p>
+   <strong>Candidate:</strong>
+   <%= @study.candidate_id %>
+ </p>
+ 
+ <%= link_to 'Edit', edit_study_path(@study) %> |
+ <%= link_to 'Back', studies_path %>

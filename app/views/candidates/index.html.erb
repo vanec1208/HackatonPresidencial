@@ -1,0 +1,34 @@
+<h1>Listing candidates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Timeline</th>
+      <th>Twitter</th>
+      <th>Age</th>
+      <th>Party</th>
+      <th>Webpage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @candidates.each do |candidate| %>
+      <tr>
+        <td><%= candidate.name %></td>
+        <td><%= candidate.timeline %></td>
+        <td><%= candidate.twitter %></td>
+        <td><%= candidate.age %></td>
+        <td><%= candidate.party %></td>
+        <td><%= candidate.webpage %></td>
+        <td><%= link_to 'Edit', edit_candidate_path(candidate) %></td>
+        <td><%= link_to 'Destroy', candidate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Candidate', new_candidate_path %>

@@ -1,0 +1,44 @@
+<h1>Estadisticas de propuestas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Propuesta</th>
+      <th>Candidato</th>
+      <th>Voto</th>
+      <th>Pregunta</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bestans.each do |question| %>
+      <tr>
+        <td><%= question[:test] %></td>
+        <td><%= question[:name] %></td>
+        <td><%= question[:num_votos] %></td>
+        <%case question[:area].to_i%>
+          <%when 1%>
+            <td>Salud</td>
+          <%when 2%>
+            <td>Educación</td>
+          <%when 3%>
+            <td>Seguridad</td>
+          <%when 4%>
+            <td>Empleo</td>
+          <%when 5%>
+            <td>MAmbiente</td>
+          <%when 6%>
+            <td>Agro</td>
+          <%when 7%>
+            <td>Paz</td>
+        <%else%>
+          <td></td>
+        <%end%>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

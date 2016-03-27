@@ -1,0 +1,11 @@
+<div class="row ">
+  <h1>Trivia Presidencial</h1>
+</div>
+<div class="row">
+    <%= form_tag sessions_path do %>
+      <%= text_field_tag :username, params[:username] , :placeholder => "Username" , class: "text"%>
+      <%= password_field_tag :password, nil , placeholder:"Contraseña"  %>
+      <%= submit_tag "Iniciar sesion" ,class: "button"%>
+    <% end %>
+  </div>
+</div>
